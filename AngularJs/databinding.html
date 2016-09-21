@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html data-ng-app>
+
+<head>
+    <link rel="stylesheet" href="/content/style.css">
+    <link rel="stylesheet" href="/content/bootstrap.min.css">
+    <script src="/scripts/bootstrap.min.js"></script>
+     <script src="/scripts/node_modules\angular\angular.min.js"></script>
+    <script src="/script.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-xs-12">
+            <h1><span class="glyphicon glyphicon-headphones"></span>Hello World!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+        <div class="form-group">
+           <input class="form-control" id="search" placeholder="Search artists" type="text"
+           data-ng-model="search">
+           <h1>{{search}}</h1>
+            
+        </div>
+            <table class="table table-striped table-hover">
+                <tr>
+                    <th>
+                        Artist Name
+                    </th>
+                    <th>
+                        Genre
+                    </th>
+                    <th>
+                        Rating
+                    </th>
+                </tr>
+                <tr>
+                    <td>Tylor Swift </td>
+                    <td> Alternative </td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Ricky Martin </td>
+                    <td> Alternative </td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Tylor Swift </td>
+                    <td> Alternative </td>
+                    <td>5</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
