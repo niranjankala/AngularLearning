@@ -3,7 +3,7 @@
         Product List
     </div>
     <div class="card-body">
-        <h4 class="card-title">Title</h4>
+        <!--<h4 class="card-title">Title</h4>-->
         <div class="row">
             <div class="col-md-2">
                 Filter by:
@@ -18,7 +18,8 @@
             </div>
         </div>
         <div class="table-responsive">
-        <table class="table">
+        <table class='table' 
+        *ngIf='products && products.length'>
             <thead >
                 <tr>
                     <th><button type="button" class="btn btn-primary">Show Image</button></th>
@@ -30,19 +31,19 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <!-- <tr>
-                        <td scope="row"></td>
+                    <tr *ngFor='let product of products'>
                         <td></td>
-                        <td></td>
-                        <td scope="row"></td>
-                        <td></td>
-                        <td></td>
-                    </tr>                     -->
+                        <td>{{ product.productName }}</td>
+                        <td>{{ product.productCode }}</td>
+                        <td>{{ product.releaseDate }}</td>
+                        <td>{{ product.price }}</td>
+                        <td>{{ product.starRating }}</td>
+                    </tr>                  
                 </tbody>
         </table>
         </div>
     </div>
-    <div class="card-footer text-muted">
+    <!--<div class="card-footer text-muted">
         Footer
-    </div>
+    </div>-->
 </div>
