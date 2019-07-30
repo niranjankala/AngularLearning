@@ -12,7 +12,7 @@ export class ProductListComponent implements OnInit {
     this.listFilter = 'cart';
 
   }
-  title: string = 'Product List';
+  pageTitle: string = 'Product List';
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
@@ -85,6 +85,10 @@ export class ProductListComponent implements OnInit {
   ngOnInit() { }
   toggleImage(): void {
     this.showImage = !this.showImage;
+  }
+
+  onRatingClicked(message: string) {
+    this.pageTitle = "Product List: " + message;
   }
 }
 
